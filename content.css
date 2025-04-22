@@ -1,0 +1,177 @@
+/* 右下角浮动图标 */
+.url-viewer-floating-icon {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  cursor: move; /* 表示可拖动 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  touch-action: none; /* 防止在触摸设备上滚动 */
+}
+
+.url-viewer-floating-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 拖动时的样式 */
+.url-viewer-floating-icon:active {
+  cursor: grabbing;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.url-viewer-floating-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+/* URL查看器容器 */
+.url-viewer-container {
+  position: fixed;
+  right: 20px;
+  top: 10px;
+  height: 90vh;
+  max-height: 800px;
+  width: 35%;
+  min-width: 350px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  z-index: 9998;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 顶部栏 */
+.url-viewer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4285f4;
+  color: white;
+  padding: 10px 15px;
+  flex-shrink: 0;
+}
+
+.url-viewer-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* URL选择器容器 */
+.url-viewer-selector-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin: 0 1px;
+  max-width: 40%;
+}
+
+/* URL选择器样式 */
+.url-viewer-selector {
+  flex: 1;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #3367d6;
+  background-color: white;
+  color: #333;
+  font-size: 14px;
+  outline: none;
+}
+.url-viewer-selector:focus {
+  border-color: #1a53ff;
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.3);
+}
+
+.url-viewer-new-window-btn {
+  margin-left: 8px;
+  padding: 4px 8px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.url-viewer-new-window-btn:hover {
+  background-color: #3367d6;
+}
+
+.url-viewer-close-btn {
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.url-viewer-close-btn:hover {
+  opacity: 0.8;
+}
+
+/* 内容区 */
+.url-viewer-content {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: calc(100% - 50px); /* 减去顶部栏的高度 */
+}
+
+/* URL输入框 */
+.url-viewer-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* 按钮容器 */
+.url-viewer-button-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* 按钮样式 */
+.url-viewer-button {
+  padding: 8px 15px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.url-viewer-button:hover {
+  background-color: #3367d6;
+}
+
+/* iframe样式 */
+.url-viewer-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  box-sizing: border-box;
+  flex: 1;
+} 
